@@ -1,0 +1,118 @@
+---COMANDOS---
+:r reinicio el programa
+
+OBJETOS, modelar
+juntar en una unidad computacional comportamientos y datos
+independientes entre ellas, con el objetivo de la posibilidad de que puedan evolucionar independientemente
+REF:paquete cerrado, caja negra,
+
+WOLLOK 
+surge en la UTN, version purista para enseñar objetos.
+
+EJEMPLO
+Primer ejemplo: Pepita
+
+            Pepita
+            - vola.
+            - estaCansada.
+
+MENSAJE
+'80 "orientado a mensajes".
+
+vola - es un procedimiento, accion(con efecto)
+estaCansada - es una funcion, pregunta(sin efecto)
+
+mensajes 
+{
+    - preguntas/consultas
+    - acciones/ordenes
+}{
+    - receptor
+    - parametros
+    - valor de retorno
+}
+
+#no hay efecto en logico, funcional, el estado de mi programa es inmutable
+ controlar donde quiero efecto-
+
+  1       +        1
+objeto  mensaje  objeto 
+
+---CONSULTAS---
+[1,2,3].length()
+3
+[1,2,3].contains(3)
+true
+[1,2,3].size()
+3
+"hola " + "mundo"
+"hola mundo"
+
+---WEB---
+diagrama dinámico 
+nos deja ver los objetos que estan en el ambiente, 
+conjunto de objetos que se mandan mensaje en un ambiente.
+energia(los punteros) en el diagrama es una referencia, 
+una herramienta que me permite a apuntar a un objeto, 
+la memoria la maneja automatica.
+
+##-well known objects (wko)
+
+en el diagrama solo vemos referencias no temporales que definimos nosotros.
+
+###solo puedo tener una referencia a pepita, no la puedo tener.
+
+AMBIENTE
+
+DEFINICION
+conjunto de mensajes que se conocen por referencia y se conocen en un ambiente.
+una forma de hacer acciones es usando referencias,
+
+---EJEMPLO
+var ochenta = 90 (defino una varible que tiene referencia)
+
+#noventa si no lo uso, se lo lleva el GARBAGE COLLECTOR
+
+variables{
+    -variable
+    -constante
+}
+
+---GARBAGE COLLECTOR---
+no lo uso, se lo lleva
+
+
+SIEMPRE ME COMUNICO CON LA REFERENCIA
+candadito= significa que es constante
+
+METODOS
+metodos = procedimiento
+
+ATRIBUTOS
+atributos = asignacion de variables
+
+ASIGNACION
+asignacion destructica = c    ej: method estaCansada() = energia <= 20
+asignacion = haskell    ej: energia = energia + 1
+
+FIRMA
+firma = nombre + parametros
+
+###EL PODER DE ELEGIR DONDE TENER efecto
+
+ENCAPSULAMIENTO
+-formas de implementar
+
+INTERFACE o contrato 
+son los mensajes que pepita tiene, que parametros acepta, tiene efecto o no,
+
+IMPLEMENTACION 
+lo que no se ve. 
+
+WARNINGS!!
+Precalculo = confundir mensaje con atributo, esta mal.
+
+
+POLIMORFISMO
+Polimorfismo = mismo contrato, para que se comuniquen dos objetos, mandar un mensaje uno y el otro entienda
+todos los objetos entiendan los mismos mensajes, entonces son objetos polimorficos.
