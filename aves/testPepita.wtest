@@ -1,0 +1,43 @@
+import pepita.*
+
+describe "tests sobre pepita" {
+
+	test "pepita comienza con energía" {
+		assert.equals(100, pepita.joule())
+	}
+
+	test "pepita comienza siendo fuerte" {
+		assert.that(pepita.esFuerte())
+	}
+
+	test "pepita pierde energía al volar" {
+		pepita.vuela(5)
+		assert.equals(85, pepita.joule())
+	}
+
+	test "pepita gana energía al comer" {
+		pepita.come(120)
+		assert.equals(580, pepita.joule())
+	}
+
+	test "pepita vuela 0 kilómetros y pierde igualmente energía - caso borde" {
+		pepita.vuela(0)
+		assert.equals(90, pepita.joule())
+	}
+
+	test "pepita come 0 gramos y la energía se mantiene igual - caso borde" {
+		pepita.comer(0)
+		assert.equals(100, pepita.joule())
+	}
+
+	test "pepita vuela muchos kilómetros, y deja de ser fuerte" {
+		pepita.vuela(60)
+		assert.notThat(pepita.esFuerte())
+	}
+
+	test "pepita vuela los suficientes kilómetros para no ser fuerte - caso límite" {
+		pepita.vuela(40)
+		assert.notThat(pepita.esFuerte())
+	}
+
+}

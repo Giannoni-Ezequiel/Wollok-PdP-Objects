@@ -22,6 +22,10 @@ object pepita {
   method comer(comida){
     joule += alpiste.joule()
   }
+
+  method esFuerte() {
+		return joule > 50
+	}
 }
 
 object alpiste {
