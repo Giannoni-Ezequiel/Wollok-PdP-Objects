@@ -1,0 +1,6 @@
+---COMANDOS---
+:r reinicio el programa
+
+
+Iniciar un nuevo proyecto
+wollok init --proyect nombre-proyecto

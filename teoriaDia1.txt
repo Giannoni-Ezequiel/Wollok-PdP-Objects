@@ -1,6 +1,3 @@
----COMANDOS---
-:r reinicio el programa
-
 OBJETOS, modelar
 juntar en una unidad computacional comportamientos y datos
 independientes entre ellas, con el objetivo de la posibilidad de que puedan evolucionar independientemente
