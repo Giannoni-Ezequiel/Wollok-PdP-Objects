@@ -1,9 +1,31 @@
-import example.pepita
+import tomYJerry.*
 
-describe "group of tests for pepita" {
+describe "group of tests for jerry" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "when jerry hurry, your velocity should be increase to 50%" {
+    jerry.velocity(3)
+    jerry.hurry()
+    assert.equals(4.5, jerry.velocity())
   }
 
+}
+
+describe "Parte 1" {
+  test "the velocity from Tom depends of your energy" {
+    tom.energy(20)
+    assert.equals(7, tom.velocity())
+  }
+
+  test "when Tom eat a rabbit, your energy grow up in base of your weigth at the rabbit"
+  {
+    tom.energy(10)
+    tom.eat(jerry)
+    assert.equals(22 + jerry.peso(), tom.energy())
+  }
+
+  test "When Tom run, lose energy" {
+    tom.energy(10)
+    tom.run(2)
+    assert.that(tom.energy() = 10)
+  }
 }

@@ -1,0 +1,61 @@
+----BLOQUES Y TESTING----
+
+
+-----------------BLOQUES
+
+.- Son objetos que representan algo para hacer, 
+    con sintaxis amigable.
+.- Pueden o no tener parámetros.
+.- Entienden el mensaje apply que esperará 
+    tantos parámetros como el bloque necesite.
+.- Recuerdan el contexto en donde se definen
+
+5.times({n => jerry.hurry() })
+objeto.mensaje
+-Conseguir que tenga efecto
+
+---ERROR!!!!
+object jerry {
+    method peso() = {return 5}
+}
+Retorna un bloque no 5
+
+-----------------TESTING
+
+Pruebas Manuales
+Requerimientos-
+.- probar las consultas en la consola
+
+Pruebas Automáticas
+Requerimientos-
+.- test "Descripción representativa " {
+    Configurancion previa
+    Estiímulo
+    Validación
+}
+.- destacar casos de prueba relevantes
+
+TDD - Metodología de testing, primero armo el test, luego desarrollo.
+
+--Validaciones y resultados
+- assert.that(condicion)
+- assert.notThat(condicion)
+- assert.equals(valorEsperado, valorObtenido)
+
+- verde: se ejecutó el test sin problemas
+- amarillo: falló una Validación al ejecutar el test
+- rojo: hubo un error al ejecutar el test
+
+amarilo y rojo(incluyen detalles del problema)
+
+-Un test que no manda un mensaje de Validación no está testeando nada.
+
+Bloques y Testeo unitario
+como testear que dividimos por cero da error?
+- fail : 
+    assert.throwsException({1/0})
+    verde: falló, como se esperaba
+
+self.error("")  // da cuenta de que falta implementar.
+
+
