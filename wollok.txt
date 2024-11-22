@@ -4,3 +4,4 @@
 
 Iniciar un nuevo proyecto
 wollok init --proyect nombre-proyecto
+wollok init 

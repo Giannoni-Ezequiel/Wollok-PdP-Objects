@@ -1,7 +1,9 @@
 OBJETOS, modelar
 juntar en una unidad computacional comportamientos y datos
-independientes entre ellas, con el objetivo de la posibilidad de que puedan evolucionar independientemente
-REF:paquete cerrado, caja negra,
+independientes entre ellas, 
+con el objetivo de la posibilidad de que puedan evolucionar independientemente.
+
+REFERENCIA:paquete cerrado, caja negra,
 
 WOLLOK 
 surge en la UTN, version purista para enseñar objetos.
@@ -16,8 +18,9 @@ Primer ejemplo: Pepita
 MENSAJE
 '80 "orientado a mensajes".
 
-vola - es un procedimiento, accion(con efecto)
-estaCansada - es una funcion, pregunta(sin efecto)
+   *    vola        - es un procedimiento, accion   (con efecto)
+
+   *    estaCansada - es una funcion,      pregunta (sin efecto)
 
 mensajes 
 {
@@ -30,10 +33,11 @@ mensajes
 }
 
 #no hay efecto en logico, funcional, el estado de mi programa es inmutable
+
  controlar donde quiero efecto-
 
-  1       +        1
-objeto  mensaje  objeto 
+  1       +       1
+objeto mensaje  objeto 
 
 ---CONSULTAS---
 [1,2,3].length()
@@ -62,13 +66,12 @@ en el diagrama solo vemos referencias no temporales que definimos nosotros.
 AMBIENTE
 
 DEFINICION
-conjunto de mensajes que se conocen por referencia y se conocen en un ambiente.
-una forma de hacer acciones es usando referencias,
+conjunto de mensajes que se conocen por referencia y se conocen en un ambiente,
+una forma de hacer acciones es usando referencias.
 
 ---EJEMPLO
-var ochenta = 90 (defino una varible que tiene referencia)
-
-#noventa si no lo uso, se lo lleva el GARBAGE COLLECTOR
+(defino una varible que tiene referencia)
+var ochenta = 90 
 
 variables{
     -variable
